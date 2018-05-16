@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import { css } from 'emotion'
 
 export default class Form extends Component {
   render() {
     return (
       <div>
-        <form>
+        <form className={this.styles}>
           <div>
             <input type="text" value={this.props.name} />
           </div>
@@ -45,5 +46,11 @@ export default class Form extends Component {
         </form>
       </div>
     )
+  }
+
+  get styles() {
+    return css`
+      margin: ${this.props.margin || 20}px;
+    `
   }
 }
