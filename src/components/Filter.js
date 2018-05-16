@@ -12,17 +12,17 @@ export default class Filter extends Component {
         />
         <Button
           text="CSS"
-          onClick={this.props.onClick(1)}
+          onClick={event => this.props.onClick(1)}
           isSelected={this.props.selected === 1}
         />
         <Button
           text="JS"
-          onClick={this.props.onClick(2)}
+          onClick={event => this.props.onClick(2)}
           isSelected={this.props.selected === 2}
         />
         <Button
           text="All"
-          onClick={this.props.onClick(3)}
+          onClick={event => this.props.onClick(3)}
           isSelected={this.props.selected === 3}
         />
       </React.Fragment>
