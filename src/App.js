@@ -5,14 +5,15 @@ import Filter from './components/Filter'
 class App extends Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Button
           text="Add user"
           isSelected={false}
           onClick={event => console.log(event)}
         />
-        <Filter selected={0} onClick={event => console.log(event)} />
-      </div>
+        <br />
+        <Filter selected={3} onClick={index => console.log(index)} />
+      </React.Fragment>
     )
   }
 }

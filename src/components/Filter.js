@@ -4,12 +4,28 @@ import Button from './Button'
 export default class Filter extends Component {
   render() {
     return (
-      <div>
-        <Button text="HTML" onClick={this.props.onClick} />
-        <Button text="CSS" onClick={this.props.onClick} />
-        <Button text="JS" onClick={this.props.onClick} />
-        <Button text="All" onClick={this.props.onClick} />
-      </div>
+      <React.Fragment>
+        <Button
+          text="HTML"
+          onClick={event => this.props.onClick(0)}
+          isSelected={this.props.selected === 0}
+        />
+        <Button
+          text="CSS"
+          onClick={this.props.onClick(1)}
+          isSelected={this.props.selected === 1}
+        />
+        <Button
+          text="JS"
+          onClick={this.props.onClick(2)}
+          isSelected={this.props.selected === 2}
+        />
+        <Button
+          text="All"
+          onClick={this.props.onClick(3)}
+          isSelected={this.props.selected === 3}
+        />
+      </React.Fragment>
     )
   }
 }
